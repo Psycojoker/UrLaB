@@ -1,14 +1,10 @@
-<html>
-    <head><title>UrLab</title></head>
-    <body style="font-size: 13px; font-family: sans-serif">
-        <center>
-            <img src="/static/img/urlab.png" style="border-bottom: 2px solid black; margin-bottom: 30px"><br>
-            <strong style="line-height: 20px">Here will stand something really cool.<br>
-                We still don't quite know what.<br>
-                Probably dragons..<br><br>
-                Stay tuned!<br><br>
-                <a href="/urlab:urlab" style="color: blue; text-decoration: none">WIKI.WIKI</a>
-            </strong>
-        </center>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<strong style="line-height: 20px">Here will stand something really cool.<br>
+    We still don't quite know what.<br>
+    Probably dragons..<br><br>
+    Stay tuned!<br><br>
+    <a href="/urlab:urlab" style="color: blue; text-decoration: none">WIKI.WIKI</a>
+</strong>
+{% endblock %}
