@@ -4,7 +4,8 @@
     cd UrLaB
     virtualenv --no-site-packages --distribute ve
     source ve/bin/activate
-    pip install django
+    pip install -r requirements.txt
+    python manage.py syncdb
 
 To launch the dev server:
 
