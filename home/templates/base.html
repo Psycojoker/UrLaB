@@ -10,7 +10,14 @@
     <body style="font-size: 13px; font-family: sans-serif">
         <center>
 
-            <a href="/"><img src="/static/img/urlabh.png" style="margin-bottom: 10px; "></a></br>
+            <a href="/">
+                {% if request.get_full_path == "/" %}
+                <img src="/static/img/urlab.png">
+                {% else %}
+                <img src="/static/img/urlabh.png" style="margin-bottom: 10px;">
+                {% endif %}
+            </a>
+            </br>
             <div id="menu">
                 <a href="news">News</a> - <a href="/urlab:urlab">Wiki</a>
             </div>
