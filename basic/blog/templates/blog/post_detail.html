@@ -7,7 +7,7 @@
 {% block body_id %}post_{{ object.id }}{% endblock %}
 
 
-{% block content_title %}
+{% block content %}
   <h2>{{ object.title }}</h2>
   <p class="other_posts">
     {% if object.get_previous_by_publish %}
@@ -17,10 +17,6 @@
     | <a class="next" href="{{ object.get_next_post.get_absolute_url }}" title="{% trans "View next post" %}">{{ object.get_next_post }} &raquo;</a>
     {% endif %}
   </p>
-{% endblock %}
-
-
-{% block content %}
   {% load blog comments tagging_tags inlines markup %}
 
   <p class="date">{{ object.publish|date:"j F Y" }}</p>
