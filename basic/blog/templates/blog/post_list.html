@@ -16,8 +16,8 @@
     {% for post in object_list %}
     <div class="item">
       <h3 class="title"><a href="{{ post.get_absolute_url }}" title="{% trans "View this post" %}">{{ post.title }}</a></h3>
+      <p class="tease">{% if post.tease %}{{ post.tease|safe }}{% else %}{{ post.body|safe }}{% endif %}</p>
       <p class="date">{{ post.publish|date:"Y F d" }}</p>
-      <p class="tease">{{ post.tease|safe }}</p>
     </div>
     {% endfor %}
   </div>
